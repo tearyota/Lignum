@@ -1,0 +1,60 @@
+<html>
+<head>
+    <style>
+ body{ background: url(images/Desktop.png) no-repeat;    
+                -webkit-background-size: 100%;} 
+    </style>
+</head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles2.css">
+     <link media="screen" href="css/water.css" type="text/css" rel="stylesheet">
+    <body>
+        
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ripples.js"></script>
+<script>
+$(document).ready(function() {
+	try {
+		$('body').ripples({
+			resolution: 512,
+			dropRadius: 20, //px
+			perturbance: 0.04,
+		});
+		$('main').ripples({
+			resolution: 128,
+			dropRadius: 10, //px
+			perturbance: 0.04,
+		});
+	}
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	$('.disable').show().on('click', function() {
+		$('body, main').ripples('destroy');
+		$(this).hide();
+	});
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('main');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 20;
+		var strength = 0.04 + Math.random() * 0.04;
+		
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 400);
+});
+</script>
+
+        <a class="lol" href="news.html">Sign up</a>
+         <footer class="kek">
+             <a href="EterbesX.ru/home.html"><img src="images/q.png" height="40" align="left" class="logo2"></a>
+            <a href="https://en.unesco.org"><img src="images/unesco.png" height="40" align="left" class="logo2"></a>
+             <a href="https://www.apple.com"><img src="images/apple.png" height="40" align="left" class="logo2"></a>
+              <a href="https://www.mcdonalds.com/us/en-us.html"><img src="images/mc.png" height="40" align="left" class="logo2"></a>
+            
+  </footer>
+    </body>
+</html>

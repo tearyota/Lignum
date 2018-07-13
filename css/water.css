@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; }
+html {
+	height: 100%;
+}
+body {
+	color: #fff;
+	background-image: url(../images/Desktop.png);
+	height: 100%;
+	text-align: center;
+}

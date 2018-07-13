@@ -28,14 +28,15 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 <content>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"></form>
-    <label for="username">Введите ваш логин:</label>
-    <input type="text" name="username">
-      <label for="password">Введите ваш пароль:</label>
-    <input type="password" name="password1">
-      <label for="password">Подтвердите пароль:</label>
-    <input type="password" name="password2">
-    <button name="submit">Вход</button>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <label for="username">Введите ваш логин:</label>
+        <input type="text" name="username">
+          <label for="password">Введите ваш пароль:</label>
+        <input type="password" name="password1">
+          <label for="password">Подтвердите пароль:</label>
+        <input type="password" name="password2">
+        <button type="submit">Вход</button>
+    </form>
 </content>
 </body>
 </html>
